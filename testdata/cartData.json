@@ -1,5 +1,7 @@
 {
     "productname": "Sauce Labs Onesie",
+    "url": "https://www.saucedemo.com/inventory-item.html?id=2",
     "productdescription": "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel." ,
-    "productprice": "$7.99"
+    "productprice": "$7.99",
+    "checkouturl": "https://www.saucedemo.com/checkout-step-one.html"
 }

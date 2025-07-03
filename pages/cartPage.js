@@ -3,7 +3,7 @@ class cartPage {
 
     constructor(page) {
         this.page = page;
-        this.productName = '#item_2_title_link';
+        this.productName = '.inventory_item_name';
         this.productDescription = '.inventory_details_desc.large_size';
         this.productPrice = '.inventory_details_price';
         this.productImage = '//img[@alt="Sauce Labs Onesie"]';
@@ -15,21 +15,15 @@ class cartPage {
         
     }
 
-    async verifyProduct(productname, productdescription, productprice) {
-        await expect(this.page.locator(this.productImage)).toHaveText(productname);
+    async verifyProduct() {
         await this.page.locator(this.productName).click();
-        await expect(this.page).toHaveURL('https://www.saucedemo.com/cart.html');
-        await expect(this.page.locator(this.productDescription)).toContain(productdescription);
-        await expect(this.page.locator(this.productPrice)).toHaveText(productprice);
-        await expect(this.page.locator(this.productImage)).toBeVisible();
-        await expect(this.page.locator(this.productBackBtn)).toBeVisible();
+    }
+
+    async goBackToCart() {
         await this.page.locator(this.shoppingCart).click();
     }
 
     async verifyCart() {
-        await expect(this.page.locator(this.shoppingCart)).toBeVisible();
-        await expect(this.page.locator(this.removeBtn)).toBeVisible();
-        await expect(this.page.locator(this.checkoutBtn)).toBeVisible();
         await this.page.locator(this.checkoutBtn).click();
     }
 }

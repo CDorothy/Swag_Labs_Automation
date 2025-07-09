@@ -15,11 +15,11 @@ test("Login Test", async({page}) => {
         await newalert.accept(); //accept it
     })
 
-    await login.login(logindata.username, logindata.password, logindata.url);
+    await login.login(logindata.username, logindata.password);
 
     await page.waitForTimeout(2000);
 
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(page).toHaveURL(logindata.url);
 
     await page.waitForTimeout(2000);
 

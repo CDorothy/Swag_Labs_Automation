@@ -21,7 +21,7 @@ test("product page", async({page}) => {
 
     await page.waitForTimeout(2000);
 
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(page).toHaveURL(logindata.url);
 
     const product = new productPage(page);
 
@@ -31,7 +31,7 @@ test("product page", async({page}) => {
 
     await page.waitForTimeout(2000);
 
-    await expect(page).toHaveURL("https://www.saucedemo.com/cart.html");
+    await expect(page).toHaveURL(productdata.url);
 
     await page.waitForTimeout(2000);
 

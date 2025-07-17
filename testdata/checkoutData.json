@@ -1,5 +1,7 @@
 {
     "firstname": "Dorothy",
     "lastname": "Chowdhury",
-    "zipcode": "122017"
+    "zipcode": "122017",
+    "title": "Checkout: Your Information",
+    "url": "https://www.saucedemo.com/checkout-step-two.html"
 }
